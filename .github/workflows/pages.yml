@@ -22,6 +22,7 @@ jobs:
                 # 定义版本和 commit 的映射关系
                 declare -A dict=(
                     ["1.5.x"]="fd4ccd143d7e67b5c19cba3987043ae7db012ca8"
+                    ["1.6.x"]="4c5184d444bb004b1436c6dc76670838f6faa07a"
                     # 添加更多的版本和 commit
                 )
                 # 遍历字典并检出每个 commit 到对应的目录
@@ -43,7 +44,7 @@ jobs:
             - name: Checkout linglong release
               uses: actions/checkout@v4
               with:
-                  ref: 294988fe388c4d7d82196fc5eb5dce6edcaf7772 # 指定玲珑项目的 commit 提交，可能文档有小部分修改，不需要从 tag 获取
+                  ref: 846865937f8e6f22bc80a5656d6156065b6b5744 # 指定玲珑项目的 commit 提交，可能文档有小部分修改，不需要从 tag 获取
                   path: tmp
                   repository: OpenAtom-Linyaps/linyaps
                   sparse-checkout: |
